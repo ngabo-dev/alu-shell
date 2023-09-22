@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -printf "%P\n"
+grep '^user1:' /etc/passwd | cut -d: -f1,6
