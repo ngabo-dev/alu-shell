@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "YourInputText" | tr 'Ac' 'Ze' <<< "We can program persanally"
+tr A Z | tr c e
