@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d: -f 1,6 /etc/passwd | sort | grep -E 'file_1|file_2'
+find . -empty -printf "%f\n"
