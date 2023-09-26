@@ -1,1 +1,1 @@
-basics of shell
+all about shell
