@@ -1,2 +1,2 @@
 #!/bin/bash
-setvar name("BEST") value("School")
+SET GLOBAL (BEST='School'
