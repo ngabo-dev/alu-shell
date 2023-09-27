@@ -1,2 +1,2 @@
 #!/bin/bash
-env declare -F
+echo env declare -F
