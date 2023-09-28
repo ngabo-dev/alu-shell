@@ -14,7 +14,7 @@ do
 			echo -e "17\nbad luck from Italy"
 			;;
 		*)
+			echo "$i"
 	esac
-	echo "$i"
 	((i++))
 done
