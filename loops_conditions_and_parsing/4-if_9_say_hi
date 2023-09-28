@@ -2,10 +2,13 @@
 # a bash script to print "Best School" ten times and "Hi" after.
 x="Best School"
 y=1
-while (($y <= 10));
-do
-	echo "$x"
-	y=$((y + 1));
+while true; do
+    if [ "$y" -le 10 ]; then
+        echo "$x"
+        y=$((y + 1))
+    else
+        break
+    fi
 done
 
 echo "Hi"
