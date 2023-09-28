@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#a Bash script that displays content of the current directory in a list format.
+for file in *; do
+if [ -f "$file" ]; then
+name_after_dash="${file#*-}"
+echo "$name_after_dash"
+fi
+done
