@@ -3,7 +3,7 @@
 x="Best School"
 y=1
 while true; do
-    if [ "$y" -le 10 ]; then
+    if [ "$y" -le 9 ]; then
         echo "$x"
         y=$((y + 1))
     else
