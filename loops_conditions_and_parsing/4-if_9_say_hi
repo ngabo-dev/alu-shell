@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# a bash script to print "Best School" ten times and "Hi" after.
+x="Best School"
+y=1
+while (($y <= 10));
+do
+	echo "$x"
+	y=$((y + 1));
+done
+
+echo "Hi"
