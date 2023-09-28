@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #a Bash script that displays Best School 10 times using while loop.
-word="Best School"  # Replace "Hello" with the word you want to print
+word="Best School"
 count=1
 
 while [ $count -le 10 ]
