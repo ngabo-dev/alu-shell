@@ -4,10 +4,10 @@ i=1
 word="Best School"
 while [ $i -le 10 ]
 do
-if (($i == 4))
+if ((i == 4))
 then
 echo "bad luck"
-elif (($i == 8))
+elif ((i == 8))
 then
 echo "good luck"
 else
