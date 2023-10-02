@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#comment
+kill -f "7-highlander"
