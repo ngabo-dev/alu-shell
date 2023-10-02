@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #there is actually another way to do this.
-ps kill 4-to_infinity_and_beyond
+ps kill -f 4-to_infinity_and_beyond
