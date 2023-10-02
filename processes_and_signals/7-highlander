@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 #Make a copy of your 6-stop_me_if_you_can script, name it 67-stop_me_if_you_can.
-sigterm_handler() {
+function handle_sigterm {
     echo "I am invincible!!!"
     exit 0
 }
 
-# Register the sigterm_handler function for SIGTERM signal
-trap 'sigterm_handler' SIGTERM
+trap 'handle_sigterm' SIGTERM
 
-# Main loop
+echo "To infinity and beyond indefinitely"
 while true; do
     echo "To infinity and beyond indefinitely"
     sleep 2
-done
+done > output.txt
