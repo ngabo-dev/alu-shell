@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 #Make a copy of your 6-stop_me_if_you_can script, name it 67-stop_me_if_you_can.
 function handle_sigterm {
-    echo "I am invincible!!!"
-    exit 0
+	echo "I am invincible!!!"
+	exit 0
 }
+
+trap handle_sigterm SIGTERM
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
