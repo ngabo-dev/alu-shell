@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# manage_my_process script
+#Manage my process
 
                                                   
 start () {                                         
