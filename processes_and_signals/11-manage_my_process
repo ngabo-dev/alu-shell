@@ -1,34 +1,32 @@
 #!/usr/bin/env bash
-# Manage my process
+#Manage my process
 
-start() {
+
+start () {
     ./manage_my_process &
     echo $! > /var/run/my_process.pid
-    echo "Script started manage_my_process process"
+    echo "manage_my_process started"               
 }
 
-stop() {
-    if [ -f /var/run/my_process.pid ]; then
-        pid=$(cat /var/run/my_process.pid)
-        kill "$pid"
-        rm -rf /var/run/my_process.pid
-        echo "Script deleted /var/run/my_process.pid file and stopped manage_my_process process"
-    else
-        echo "No running process found."
-    fi
+stop () {
+    pkill -f "./manage_my_process"
+    rm -rf /var/run/my_process.pid
+    echo "manage_my_process stopped"               
 }
 
-restart() {
-    stop
-    start
+restart () {
+    pkill -f "./manage_my_process"
+    rm -rf /var/run/my_process.pid
+    ./manage_my_process &
+    echo $! >> /var/run/my_process.pid
+    echo "manage_my_process restarted"             
 }
-
 case "$1" in
-    start) start ;;
-    stop) stop ;;
-    restart) restart ;;
-    *)
-        echo "Usage: manage_my_process {start|stop|restart}"
-        exit 1
-        ;;
+  start) start ;;
+  stop)  stop;;
+  restart) restart;;
+  *) echo "Usage: manage_my_process {start|stop|r\
+estart}"                                           
+
+      ;;
 esac
